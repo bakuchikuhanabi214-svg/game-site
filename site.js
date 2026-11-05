@@ -4,7 +4,7 @@
 const GAMES = {
   'emoji-clash':  { url: 'https://emojiclash.com/' },
   'soba':         { url: 'https://soba.emojiclash.com/' },
-  'hitokata':     { url: 'https://bakuchikuhanabi214-svg.github.io/Hitokata/' },
+  'hitokata':     { url: 'https://hitokata.emojiclash.com/' },
 };
 
 (function(){
