@@ -3,8 +3,8 @@
 // =====================================================================
 const GAMES = {
   'emoji-clash':  { url: 'https://emojiclash.com/' },
-  'soba':         { url: 'https://soba.emojiclash.com/' },
-  'hitokata': { url: '' },   // ← ひとかたの公開URLを入れる
+  'soba':         { url: 'https://bakuchikuhanabi214-svg.github.io/KiwamiSobaSyokunin/' },
+  'hitokata':     { url: 'https://bakuchikuhanabi214-svg.github.io/Hitokata/' },
 };
 
 (function(){
