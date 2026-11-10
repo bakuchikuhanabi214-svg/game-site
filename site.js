@@ -5,6 +5,7 @@ const GAMES = {
   'emoji-clash':  { url: 'https://emojiclash.com/' },
   'soba':         { url: 'https://soba.emojiclash.com/' },
   'hitokata':     { url: 'https://hitokata.emojiclash.com/' },
+  'tuktuk':       { url: 'https://tuktuk.emojiclash.com/' },
 };
 
 (function(){
