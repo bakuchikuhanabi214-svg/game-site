@@ -102,6 +102,10 @@ h1,h2,h3,.logo,.disp{font-family:var(--dot);font-weight:400;letter-spacing:.02em
 .news ol{list-style:none;margin:0;padding:0}
 .news li{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:14px 0;border-top:1px solid var(--line)}
 .news li:first-child{border-top:0}
+.news:not(.open) li:nth-child(n+4){display:none}
+.news-more{display:block;margin:14px auto 0;background:none;border:1px solid var(--cyan);color:var(--cyan);font-family:var(--dot);font-size:15px;padding:8px 22px;cursor:pointer;border-radius:8px}
+.news-more:hover{background:var(--cyan);color:var(--ink)}
+.news .m-close{display:none}.news.open .m-close{display:inline}.news.open .m-open{display:none}
 .news time{color:var(--cyan);font-family:var(--dot);font-size:15px;font-variant-numeric:tabular-nums}
 
 /* ===== 紹介ページ ===== */
