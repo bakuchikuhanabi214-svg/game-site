@@ -6,6 +6,7 @@ const GAMES = {
   'soba':         { url: 'https://soba.emojiclash.com/' },
   'hitokata':     { url: 'https://hitokata.emojiclash.com/' },
   'tuktuk':       { url: 'https://tuktuk.emojiclash.com/' },
+  'pikotto':      { url: 'https://pikotto.emojiclash.com/' },
 };
 
 (function(){
