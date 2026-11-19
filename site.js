@@ -14,12 +14,15 @@ const GAMES = {
   const html = document.documentElement;
   let lang;
   try{ lang = localStorage.getItem('bh_lang'); }catch(e){}
-  if (!lang) lang = (navigator.language || 'ja').toLowerCase().startsWith('ja') ? 'ja' : 'en';
+  if (!['ja','en','km'].includes(lang)){
+    const nl = (navigator.language || 'ja').toLowerCase();
+    lang = nl.startsWith('ja') ? 'ja' : nl.startsWith('km') ? 'km' : 'en';
+  }
   function setLang(l){
     lang = l; html.lang = l;
     try{ localStorage.setItem('bh_lang', l); }catch(e){}
     document.querySelectorAll('.lang button').forEach(b => b.setAttribute('aria-pressed', b.dataset.l === l));
-    const t = document.querySelector('meta[name="title-' + l + '"]');
+    const t = document.querySelector('meta[name="title-' + l + '"]') || document.querySelector('meta[name="title-en"]');
     if (t) document.title = t.content;
   }
   document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => setLang(b.dataset.l)));
@@ -32,7 +35,7 @@ const GAMES = {
     else {
       a.removeAttribute('href'); a.classList.remove('play'); a.classList.add('soon');
       a.setAttribute('aria-disabled', 'true');
-      a.innerHTML = '<span class="ja">近日公開</span><span class="en">Coming soon</span>';
+      a.innerHTML = '<span class="ja">近日公開</span><span class="en hk">Coming soon</span><span class="km">ឆាប់ៗនេះ</span>';
     }
   });
   document.querySelectorAll('[data-lamp]').forEach(el => {
